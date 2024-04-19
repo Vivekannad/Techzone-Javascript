@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: white;
+    box-sizing: border-box;
+}
+.container{
+    background-color: black;
+    display: flex;
+    height: 60vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container .line{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* width: 12%; */
+}
+.para{
+
+    /* background-color:aqua ; */
+}
+.line-1{
+    color: black;
+    /* width: 100%; */
+    border-radius: 5px;
+    display: flex;
+}
+.box{
+    width: 30px;
+    cursor: pointer;
+    text-align: center;
+    padding: 5px 0;
+    margin: 5px;
+    border-radius: 5px;
+    background-color: brown;
+}

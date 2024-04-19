@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+    <form id="form">
+        <div class="parent">
+        <div class="inputs">
+            <label for="user">First Name</label>
+            <input type="text" name="" id="user" class="outline">
+            </div>
+            <p class="color hide">Name should have minimum 4 chars</p>
+            </div>
+            <div class="parent">
+        <div class="inputs">
+            <label for="Last">Last Name</label>
+            <input type="text" name="" id="Last" class="outline">
+        </div>
+        <p class="color hide">Name should have minimum 4 chars</p>
+        </div>
+        <div class="parent">
+        <div class="inputs">
+            <label for="email">email</label>
+            <input type="text" name="" id="email" class="outline">
+        </div>
+        <p class="color hide">should contain @</p>
+    </div>
+    <div class="parent">
+        <div class="inputs">
+            <label for="pass">password</label>
+            <input type="password" name="" id="pass" class="outline"  >
+            <i class="fa-solid fa-eye" id="icon"></i>
+        </div>
+        <p class="color hide">Password should have minimum 8 characters <br> It should contain alphabets and numbers</p>
+        </div>
+        <div class="parent">
+        <div class="inputs">
+            <label for="date">Date of Birth</label>
+            <input type="date" name="" id="date" class="outline">
+        </div>
+        </div>
+        <div class="parent">
+        <div class="inputs" id="gender">
+            <label for="">Gender</label>
+            <div class="radios">
+            <label for="male">Male</label>
+            <input type="radio" name="" id="male">
+            <label for="female">Female</label>
+            <input type="radio" name="" id="female">
+            </div>
+        </div>
+        </div>
+        <div class="parent">
+        <div class="inputs" id="add">
+            <label for="address">Address</label>
+            <textarea name="" id="address" cols="30" rows="10" class="outline"></textarea>
+        </div>
+        <p class="color hide">Put full detailed address</p>
+        </div>
+        <div class="parent">
+            <div class="inputs">
+                <label for="phone">Phone</label>
+                <input type="number" name="" id="phone">
+            </div>
+            <p class="color hide">Start with 0 and put no spaces in between numbers.</p>
+        </div>
+    <div class="button">        
+        <button class="btn">Submit</button>
+        </div>
+    </form>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
