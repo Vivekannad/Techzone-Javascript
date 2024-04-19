@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        *{
+            box-sizing: border-box;
+        }
         .container{
             display: flex;
             align-items: center;
@@ -17,17 +20,25 @@
             padding: 20px 30px;
             background: black;
             color: white;
+            width: 190px;
+            justify-content: space-around;
+        }
+        .time{
+            display: flex;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="clock">
+            <div class="time">
             <p id="hour">00</p>
             <p >:</p>
             <p id="minute">00</p>
             <p>:</p>
             <p id="second">00</p>
+            </div>
+            <p id="ampm" class="margin">AM</p>
         </div>
     </div>
     <script src="./index.js"></script>

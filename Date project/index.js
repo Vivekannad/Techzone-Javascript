@@ -1,26 +1,41 @@
-// const hour = document.getElementById('hour');
-// const minute = document.getElementById('minute');
-// const second = document.getElementById('second');
+const hour = document.getElementById('hour');
+const minute = document.getElementById('minute');
+const second = document.getElementById('second');
+const amPm = document.getElementById('ampm');
 
+function clockFun(){
+   const dated = new Date();
+   let hrs =  dated.getHours();
+   let min = dated.getMinutes();
+   let sec = dated.getSeconds();
+   if(hrs <= 12){
+      amPm.textContent = 'AM'
+     } else{
+      amPm.textContent = 'PM'
+     }
+   const condition = hrs % 12;
+   if(condition){
+      hrs = condition;
+      //  console.log(hrs)
+   }else{
+     hrs = 12;
+     }
+   sec = sec.toString();
+   sec = sec.padStart(2,'0')
+   hrs = hrs.toString();
+   hrs = hrs.padStart(2,'0')
+   min = min.toString();
+   min = min.padStart(2,'0')
+   hour.textContent = hrs;
+   minute.textContent = min;
+   second.textContent = sec;
 
-// setInterval(() => {
-//     const dated = new Date();
-//     const hrs =  dated.getHours();
-//     // let hrs = 10;
-//     const min = dated.getMinutes();
-//     let sec = dated.getSeconds();
-//     // if(hrs >= 13){
-//     //     console.log(hrs)
-//     //     dated.setHours(1);
-//     // }
-//     // let sec  = 5;
-//     sec = sec.toString();
-//     sec = sec.padStart(2,'0')
-//     hour.textContent = hrs;
-//     minute.textContent = min;
-//     second.textContent = sec;
-//     // Number(sec)
-//  },1000);
+}
+
+setInterval(() => {
+   clockFun()
+},1000);
+clockFun();
 
 //  const indDay = new Date(47,7,14);
 //  const today = new Date(2024,7,14);
@@ -48,10 +63,14 @@
 //    }
    
    // Function to update clock display
-   function updateClock() {
-    // const clock = document.getElementById('clock');
-    const pakistanTime = new Date();
-    console.log(pakistanTime.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit',second: '2-digit', hour12: true }))
-    // clock.textContent = pakistanTime.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true });
-   };
-   updateClock()
+   // function updateClock() {
+   //  // const clock = document.getElementById('clock');
+   //  const pakistanTime = new Date();
+   //  console.log(pakistanTime.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit',second: '2-digit', hour12: true }))
+   //  // clock.textContent = pakistanTime.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true });
+   // };
+   // updateClock()
+
+   const today = new Date();
+   const days = today.toLocaleTimeString('ar-EG');
+   console.log(days)
