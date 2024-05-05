@@ -38,11 +38,15 @@ form.addEventListener('submit',(e) => {
 // }));
 */
 
-const box = document.querySelector('.box');
-const pa = document.querySelector('.box p')
-box.addEventListener('mouseover', () => {
-    box.innerHTML += '<p>Thank you</p>'
-});
-box.addEventListener('mouseout', () => {
-    pa.nextElementSibling.innerHTML = '';
-})
+// const box = document.querySelector('.box');
+// const pa = document.querySelector('.box p')
+// box.addEventListener('mouseover', () => {
+//     box.innerHTML += '<p>Thank you</p>'
+// });
+// box.addEventListener('mouseout', () => {
+//     pa.nextElementSibling.innerHTML = '';
+// })
+
+// document.addEventListener('scroll',(e) => {
+//     console.log(window.scrollY);
+// })

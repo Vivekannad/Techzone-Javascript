@@ -71,6 +71,3 @@ clockFun();
    // };
    // updateClock()
 
-   const today = new Date();
-   const days = today.toLocaleTimeString('ar-EG');
-   console.log(days)
