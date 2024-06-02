@@ -14,6 +14,9 @@ const eyeIcon = document.getElementById('icon');
 
 let nums = 0;
 let alphas = 0;
+paras.forEach((val) => {
+  console.log(val);
+})
 
 function passValid(pass,key) {
     const unicode = pass.charCodeAt(pass.length-1);
@@ -56,18 +59,7 @@ function passValid(pass,key) {
     password.classList.remove("border-green");
     password.classList.add("border-red");
       };}
-  
-    // let letter = false;
-    // let special = false;
-    // if(key >= 'a' || key <= 'z'){
-    //   letter = true;
-    // } else if(key >= 0 || key <= 9){
-    //   special = true;
-    // }
-      // console.log('[letter]', letter, '[special]', special);
-  
-
-
+    
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   if (firstName.value.length < 5) {
@@ -199,20 +191,44 @@ password.addEventListener("blur", () => {
   paras[3].classList.add("hide");
   password.classList.remove("border-red");
 });
-
+phone.addEventListener('keyup',() => {
+if(phone.value.length <10){
+  paras[5].classList.remove('hide');
+  phone.classList.remove('border-green');
+  phone.classList.add('border-red')
+}else{
+  paras[5].classList.add('hide');
+  phone.classList.remove('border-red');
+  phone.classList.add('border-green');
+}
+})
 phone.addEventListener("focus", () => {
   paras[5].classList.remove("hide");
+  phone.classList.add('border-red')
 });
 phone.addEventListener("blur", () => {
   paras[5].classList.add("hide");
+  phone.classList.remove('border-red')
 });
+address.addEventListener('keyup',() => {
+  if(address.value.length < 8){
+    paras[4].classList.remove("hide");
+    address.classList.add("border-red");
+    address.classList.remove("border-green");
+  }else{
+    paras[4].classList.add("hide");
+    address.classList.remove("border-red");
+    address.classList.add("border-green");
+  }
+})
 address.addEventListener("focus", () => {
   paras[4].classList.remove("hide");
-});
+  address.classList.add('border-red')
+})
 address.addEventListener("blur", () => {
   paras[4].classList.add("hide");
+  address.classList.remove('border-red')
 });
-
 eyeIcon.addEventListener('click', () => {
   if(password.type === 'password'){
     eyeIcon.className = 'fa-solid fa-eye-slash' ;
