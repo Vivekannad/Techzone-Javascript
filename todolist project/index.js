@@ -60,22 +60,23 @@ const editButton = (index) => {
     console.log(taskArray)
 }
 
-const addTodo = () => {
-    // const task = taskInput.value;
-    // if(!task){
-    //     alert('please fill the field')
-    //     return;
-    // };
-}
-
-form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    // addTodo();
-    const task = taskInput.value;
+const addTodo = (task) => {
     if(!task){
         alert('please fill the field')
         return;
     };
+
+
+}
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const task = taskInput.value;
+    addTodo(task)
+    // if(!task){
+    //     alert('please fill the field')
+    //     return;
+    // };
 
     taskArray.push(task);
     localStorage.setItem('tasks',JSON.stringify(taskArray))
@@ -85,5 +86,5 @@ form.addEventListener('submit', (e) => {
 document.addEventListener('DOMContentLoaded', () => {
    const reloadTasks =  JSON.parse(localStorage.getItem('tasks'))
    taskArray = reloadTasks;
-    generateToDO(reloadTasks)
+    generateToDO(taskArray)
 })
