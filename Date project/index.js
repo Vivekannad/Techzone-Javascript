@@ -33,8 +33,8 @@ function clockFun(){
 }
 
 setInterval(() => {
-   clockFun()
-},1000);
+   cloc;kFun()
+},1000)
 clockFun();
 
 //  const indDay = new Date(47,7,14);
